@@ -73,7 +73,7 @@ app.post("/download/music", async (req, res) => {
     console.log("Audio downloaded:", output);
 
     res.download(output, () => {
-      fs.unlinkSync(output); (for cloud)
+      fs.unlinkSync(output); // (for cloud)
     });
   } catch (err) {
     console.error("Error downloading audio:", err);
